@@ -19,28 +19,27 @@ import math
 import numpy as np
 
 
-class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+  def productExceptSelf(nums):
 #         Solution # 1
 
 
-        # arr = []
-        # mul = []
-        # for num, val in enumerate(nums):
-        #     arr = nums[:]
-        #     del arr[num]
-        #     mul.append(math.prod(arr))
-        # return (mul)
-        
-        
+      # arr = []
+      # mul = []
+      # for num, val in enumerate(nums):
+      #     arr = nums[:]
+      #     del arr[num]
+      #     mul.append(math.prod(arr))
+      # return (mul)
+
+
 #         Solution # 2
 
 
 #         ans = [1 for _ in nums]
-        
+
 #         left = 1
 #         right = 1
-        
+
 #         for i in range(len(nums)):
 #             ans[i] *= left
 #             ans[~i] *= right
@@ -48,22 +47,23 @@ class Solution:
 #             left *= nums[i]
 #             right *= nums[~i]
 #             print('left', left, 'right', right, 'ans', ans)
-        
+
 #         return ans
-    
-    
-    
+
+
+
 #         Solution # 3
-        mul = [1 for _ in nums]
-        temp = 1
-        val = 0
-        arr = nums[:]
-        arr = np.array(arr)
-        mul = np.array(mul)
-        for i in range(len(nums)):
-            val = arr[i]
-            temp = mul[i]
-            mul = val * mul
-            mul[i] = temp
-            print(temp, mul)
-        return mul
+      mul = [1 for _ in nums]
+      temp = 1
+      val = 0
+      arr = nums[:]
+      arr = np.array(arr)
+      mul = np.array(mul)
+      for i in range(len(nums)):
+          val = arr[i]
+          temp = mul[i]
+          mul = val * mul
+          mul[i] = temp
+          print(temp, mul)
+      return mul
+    
