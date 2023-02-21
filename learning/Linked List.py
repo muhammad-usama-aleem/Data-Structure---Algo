@@ -38,6 +38,38 @@ class LinkedList:
         while last.next:
             last = last.next
         last.next = node
+    
+    def get_length(self):
+        '''
+        return length
+        '''
+        count = 0
+        iter = self.head
+        while iter:
+            iter = iter.next
+            count += 1
+        return count
+
+    def delete_at_index(self, index):
+        '''
+        Before: [5]->[8]->[9]->NULL
+        given index = 1
+        After: [5]->[9]->NULL
+        '''
+        if index < 0 or index > self.get_length():
+            raise Exception('Invalid Exception')
+        if index == 0:
+            self.head = self.head.next
+        
+        count = 0
+        iter = self.head
+        while iter:
+            if index - 1 == count:
+                iter.next = iter.next.next
+                break
+            count += 1
+            iter = iter.next
+        return 
 
     def printList(self):
         temp = self.head
@@ -50,8 +82,16 @@ class LinkedList:
 
 
 
+
 ll = LinkedList()
 ll.insert_at_the_beginning(5)
 ll.insert_at_the_beginning(50)
 ll.insert_at_the_end(32)
+ll.insert_at_the_beginning(43)
+ll.insert_at_the_beginning(22)
+ll.insert_at_the_end(11)
+print(ll.get_length())
+ll.printList()
+ll.delete_at_index(2)
+print(ll.get_length())
 ll.printList()
