@@ -38,6 +38,40 @@ class LinkedList:
         while last.next:
             last = last.next
         last.next = node
+
+    def insert_at_index(self, index, data):
+        if index < 0 or index > self.get_length():
+            raise Exception('Invalid Exception')
+        if index == 0:
+            self.insert_at_the_beginning(data)
+            return
+        
+        count = 0
+        iter = self.head
+        while iter:
+            if index-1 == count:
+                node = Node(data)
+                node.next = iter.next
+                iter.next = node
+                break
+            iter = iter.next
+            count += 1
+        
+    def insert_after_value(self, data_after, data_to_insert):
+        # Search for first occurance of data_after value in linked list
+        # Now insert data_to_insert after data_after node
+        count = 0
+        iter = self.head
+        while iter:
+            if iter.data == data_after:
+                node = Node(data_to_insert)
+                node.next = iter.next
+                iter.next = node
+                break
+            iter = iter.next
+            count += 1
+            
+
     
     def get_length(self):
         '''
@@ -60,6 +94,7 @@ class LinkedList:
             raise Exception('Invalid Exception')
         if index == 0:
             self.head = self.head.next
+            return
         
         count = 0
         iter = self.head
@@ -71,6 +106,17 @@ class LinkedList:
             iter = iter.next
         return 
 
+    def remove_by_value(self, data):
+        # Remove first node that contains data
+        iter = self.head
+        while iter:
+            if iter.next.data == data:
+                iter.next = iter.next.next
+                break
+            iter = iter.next
+
+
+
     def printList(self):
         temp = self.head
         comp = ''
@@ -81,8 +127,7 @@ class LinkedList:
         print(comp)
 
 
-
-
+	
 ll = LinkedList()
 ll.insert_at_the_beginning(5)
 ll.insert_at_the_beginning(50)
@@ -90,8 +135,17 @@ ll.insert_at_the_end(32)
 ll.insert_at_the_beginning(43)
 ll.insert_at_the_beginning(22)
 ll.insert_at_the_end(11)
+ll.insert_at_the_end(11)
 print(ll.get_length())
 ll.printList()
 ll.delete_at_index(2)
 print(ll.get_length())
+ll.printList()
+ll.insert_at_index(3, 78)
+ll.printList()
+ll.insert_after_value(11, 21)
+ll.printList()
+ll.remove_by_value(11)
+ll.printList()
+ll.remove_by_value(21)
 ll.printList()
