@@ -11,10 +11,7 @@ s.pop()
 # peak at the last added element from stack
 s[-1]
 
-
-
-
-
+# -------------------------------------------------------------------------------------------
 # using collection.deque as a stack
 
 from collections import deque
