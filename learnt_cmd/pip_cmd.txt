@@ -1,0 +1,2 @@
+# to add all the dependencies in requirements.txt
+pip freeze > requirements.txt
