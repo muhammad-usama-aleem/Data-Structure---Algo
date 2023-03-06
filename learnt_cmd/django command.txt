@@ -1,0 +1,32 @@
+# to make a django project
+django-admin startproject 'Name of project'
+
+# run the project in browser
+python manage.py runserver
+
+# make a separate component called app in django
+python manage.py startapp 'Name of app'
+
+# after making that app, register it into INSTALLED_APPS in settings.py
+    list down that name in list
+
+# commit changes to project
+python manage.py  makemigrations
+
+# push changes to project
+python manage.py migrate
+
+# use shell as django python interpreter
+python manage.py shell
+
+# views are places that manages various web pages
+
+--> URL --> views(refer to html template) --> templates (contains html files) --> templates folder must be registered
+    in settings.py .->. TEMPLATES[{}] .->. DIR[base_path_to_source_code + relative_path_to_template_folder]
+
+# way through to app
+--> make models.py(fields of database or data variables for that app)
+--> transfer data from models.py to views.py (it handles the computation using that data like filter etc and
+                                              it passes the selected data to html file)
+--> url.py (it handles which url should run which function)
+--> .html file (it takes the data from views.py and render it on that page using html components)

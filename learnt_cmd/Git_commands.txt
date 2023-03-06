@@ -1,0 +1,45 @@
+clone => to clone the repository
+
+add => track your files and changes
+
+commit => save your files in git
+
+push => upload git commit to remote repo
+
+pull => download changes from remote repo to your local machine
+
+# SSH key generation
+ssh-keygen -t rsa -b 4096 -C "email address"
+
+# use `q` to exit the git window
+
+# file to be added on git
+git add ./'file_name'/'folder_name'
+
+# check the status of git
+git status
+
+# saving files to git
+git commit -m "message of the commit"
+
+# push
+git push -u origin master     (use -u to setup the branch in which you want to push, next time just use `git push`)
+git push origin master
+
+# remote add
+git remote add origin  `URL`
+
+# to view branches in git
+git branch
+
+# create a new branch
+git checkout -b `name_of_branch`
+
+# change branch
+git checkout `name_of_branch`
+
+# find changes between two branches
+git diff `name of the branch`
+
+# delete a branch
+git branch -d `branch name`
