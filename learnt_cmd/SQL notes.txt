@@ -1,0 +1,35 @@
+SQL Notes
+
+SQL Subsets:
+there are four subsets of SQL
+1- Data Defination Language (DDL)
+2- Data Manipulation Language (DML)
+3- Data Query Language (DQL)
+4- Data Control Language (DCL)
+
+
+1- Data Defination Language (DDL):
+   To define data in database using,
+i)   CREATE: to define data in database, like table
+ii)  ALter: to modify the table like add a new column in table.
+iii) Drop: to drop data from table, like removing a row from database.
+
+2- Data Manipulation Language (DML):
+   To maipulate data which is already defined in database
+i)   Insert: used to insert data in the table, like adding a new row data in the table
+ii)  Update: to update the data in the rows, like updating an entity in the row of a table
+iii) Delete: to delete one or more rows of data from a table
+
+3- Data Query Language (DQL):
+   To read data from the database, we use DQL
+i)   Select: to select the data, one or many rows, from database based on filters applied
+
+4- Data Control Language (DCL):
+   To control access to the database
+i)  GRANT: to gives users access privileges to the database.
+ii) REVOKE: to withdraws the user’s access privileges given by using the GRANT command.
+
+
+
+
+
