@@ -130,3 +130,15 @@ COMMIT: Command to save all the work you have already done in the database.
 ROLLBACK: Command to restore a database to the last committed state.
 
 
+
+## Types of Keys in Relational Model
+1- Primary Key: A primary key is a unique identifier for each row in a table. It ensures that each record is distinct and can be easily retrieved. For example, in a "Customers" table, the primary key might be a unique customer ID.
+
+2- Foreign Key: A foreign key is a field in one table that refers to the primary key in another table. It establishes a relationship between the two tables. For example, in an "Orders" table, the foreign key might be a reference to the primary key of the "Customers" table.
+
+3- Candidate Key: A candidate key is a column or set of columns in a table that can uniquely identify each row. It is similar to a primary key but is not currently designated as such. For example, in a "Students" table, the candidate key could be a combination of the student's first name, last name, and date of birth.
+
+4- Alternate Key: An alternate key is a candidate key that is not chosen to be the primary key. It can still be used to uniquely identify each row. For example, in a "Patients" table, the alternate key could be the patient's Social Security Number.
+
+5- Composite Key: A composite key is a key that is made up of multiple columns in a table. It can be used to uniquely identify each row, just like a primary key. For example, in a "Sales" table, the composite key could be a combination of the product ID and the order date.
+
